@@ -496,6 +496,10 @@ extension BMPlayer: BMPlayerControlViewDelegate {
                 
             case .fullscreen:
                 fullScreenButtonPressed()
+            
+            case .close:
+                prepareToDealloc()
+                removeFromSuperview()
                 
             default:
                 print("[Error] unhandled Action")
